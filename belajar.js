@@ -156,15 +156,15 @@ console.log(typeof(nama))
 //   alert("Halo semuanya, apa kabar");
 // });
 
-const myImage = document.querySelector("img");
-myImage.onclick = () => {
-  const mySrc = myImage.getAttribute("src");
-  if (mySrc === "./google.png") {
-    myImage.setAttribute("src", "./geocourse.png");
-  } else {
-    myImage.setAttribute("src", "./google.png");
-  }
-};
+// const myImage = document.querySelector("img");
+// myImage.onclick = () => {
+//   const mySrc = myImage.getAttribute("src");
+//   if (mySrc === "./google.png") {
+//     myImage.setAttribute("src", "./geocourse.png");
+//   } else {
+//     myImage.setAttribute("src", "./google.png");
+//   }
+// };
 
 // 🗺️JAVASCRIPT STANDARD
 // console.log('Faiz') //ok
@@ -378,11 +378,239 @@ myImage.onclick = () => {
 // }
 
 
-const angka = [63, 59, 75, 69, 12]
+// const angka = [63, 59, 75, 69, 12]
 
-let urutan = 0
+// let urutan = 0
 
-while(angka[urutan] > 50){
-  console.log(angka[urutan])
-  urutan++
+// while(angka[urutan] > 50){
+//   console.log(angka[urutan])
+//   urutan++
+// }
+
+// 🗺️DOM Manipulation - call element
+// console.log(document)
+// console.log(document.body)
+// console.log(document.head.title) //cannot access title element
+// console.log(document.getElementsByTagName('title'))
+// console.log(document.childElementCount)
+// console.log(document.head.childElementCount)
+// console.log(document.children)
+// console.log(document.head.children)
+// console.log(document.head.children[0])
+// console.log(document.head.children[2])
+
+// 🗺️ DOM Manipulation - change inner HTML
+
+// const testingDom = document.head
+// testingDom.push('hello world') // DOM is array-like, not actual array
+
+// console.log(testingDom)
+
+// let judul = document.getElementsByTagName('h1')
+
+// judul[6].innerHTML = 'Faiz'
+// console.log(judul)
+
+// const judulUbah = document.getElementsByClassName('ubah')
+// judulUbah[0].innerHTML = 'Geocourse.id'
+// console.log(judulUbah.length)
+
+// const judulItem1 = document.getElementById('item-1');
+// judulItem1.innerHTML = 'Geocourse.id'
+// console.log(judulItem1)
+
+// const test = document.getElementsByTagName('h1')
+// test.innerHTML = 'Faiz' // tidak terubah karena masih dalam bentuk HTML Collection, breakdown terlebih dahulu
+// console.log(test)
+
+// test[0].innerHTML = 'Geocourse'
+// test[1].innerHTML = 'Geocourse'
+// test[2].innerHTML = 'Geocourse'
+// test[3].innerHTML = 'Geocourse'
+// test[4].innerHTML = 'Geocourse'
+// test[5].innerHTML = 'Geocourse'
+// test[6].innerHTML = 'Geocourse'
+
+// for(let i = 0; i < test.length; i++){
+//   test[i].innerHTML = 'Geocourse'
+// }
+
+// const judulUbah = document.getElementsByClassName('ubah')
+// judulUbah[0].innerHTML = 'Geocourse.id'
+// judulUbah[1].innerHTML = 'Geocourse.id'
+// judulUbah[2].innerHTML = 'Geocourse.id'
+
+// for(let i = 0; i < judulUbah.length; i++){
+//   judulUbah[i].innerHTML = 'Geocourse.id'
+// }
+
+// 🗺️ DOM Manipulation - HTML attribute
+// const judul = document.getElementsByTagName('h1')
+// judul[6].className = 'testing'
+// // judul[6].id = 'item-25'
+// judul[6].setAttribute('id', 'item-50')
+// judul[6].style.color = 'green'
+// judul[6].style.fontFamily = 'Arial'
+
+// console.log(judul[6])
+
+// 🗺️ DOM Manipulation - add, delete dan replace element
+// const divisi = document.createElement('div')
+// const judul1 = document.createElement('h1')
+// judul1.innerHTML = 'WebGIS'
+// judul1.style.color = 'red'
+// const judul2 = document.createElement('h2')
+// judul2.innerHTML = 'JavaScript'
+// const paragraf = document.createElement('p')
+// paragraf.innerHTML = 'Lorem Ipsum'
+// document.body.appendChild(divisi)
+// divisi.append('Hello')
+// divisi.appendChild(judul1)
+
+// item di HTML Collection --- appendChild
+// menambahkan string di HTML --- append 
+// JavaScript Array --- push 
+
+// divisi.removeChild(judul1)
+// divisi.replaceChild(judul2, judul1)
+
+// console.log(document.getElementsByTagName('body')[0])
+
+// 🗺️ DOM Manipulation - Event Handler
+// const divisi = document.createElement('div')
+// document.body.appendChild(divisi)
+
+// const tombol = document.createElement('button')
+// tombol.innerHTML = 'Klik di sini'
+// divisi.appendChild(tombol)
+
+// tombol.onclick = function(){
+//   const judul = document.getElementsByTagName('h1')[0]
+//   if(judul.innerHTML === 'Hello World'){
+//     return judul.innerHTML = 'Geocourse.id'
+//   } else{
+//     return judul.innerHTML = 'Hello World'
+//   }
+// }
+
+// CASE INCREMENT DECREMENT
+// const divisi2 = document.createElement('div')
+// document.body.appendChild(divisi2)
+
+// let angka = 0
+
+// const angkaHTML = document.createElement('h1')
+// angkaHTML.innerHTML = angka
+// divisi2.appendChild(angkaHTML)
+
+// const tombolTambah = document.createElement('button')
+// tombolTambah.innerHTML = 'Naik'
+// tombolTambah.style.backgroundColor = 'green'
+// tombolTambah.style.color = 'white'
+// divisi2.appendChild(tombolTambah)
+
+// const tombolKurang = document.createElement('button')
+// tombolKurang.innerHTML = 'Turun'
+// tombolKurang.style.backgroundColor = 'red'
+// tombolKurang.style.color = 'white'
+// divisi2.appendChild(tombolKurang)
+
+// tombolTambah.onclick = function(){
+//   angka++
+//   return angkaHTML.innerHTML = angka
+// }
+
+// tombolKurang.onclick = function(){
+//   angka--
+//   return angkaHTML.innerHTML = angka
+// }
+
+// 🗺️ DOM Manipulation - Query
+// const element = document.getElementsByTagName('h1')
+// console.log(element)
+
+// const element2 = document.getElementsByClassName('ubah')
+// console.log(element2)
+
+// const kueri = document.querySelectorAll('h1.ubah')
+// console.log(kueri)
+
+// element.forEach(function(){
+//   console.log(globalThis)
+// }) // error, karena fungsi forEach hanya tersedia di kueri
+
+// kueri.forEach(function(){
+//   console.log(this)
+// })
+
+// const kueri = document.querySelectorAll('div.primer > h2[data="invalid"]')
+// console.log(kueri)
+
+// 🗺️ DOM Manipulation - CASE: Change image by number
+// CASE:
+// 1. Facebook
+// 2. Instagram
+// 3. Tiktok
+// 4. LinkedIn
+// 5. Twitter
+
+const divisi = document.createElement('div')
+document.body.appendChild(divisi)
+
+const gambar = document.createElement('img')
+gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-S8HTBQqmfcs%2FXN0ACIRD9PI%2FAAAAAAAAAlo%2FFLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw%2Fs1600%2Ff_logo_RGB-Blue_1024.png&f=1&nofb=1&ipt=e10f40cc2c622f2922096defefed8a82b8831a692d040f830711a6469deb4aa9&ipo=images'
+gambar.height = '100'
+divisi.appendChild(gambar)
+
+let angka = 1
+const teks = document.createElement('h3')
+teks.innerHTML = `Peringkat: ${angka}`
+divisi.appendChild(teks)
+
+const tombolNaik = document.createElement('button')
+tombolNaik.innerHTML = 'Naik'
+tombolNaik.style.backgroundColor = 'green'
+tombolNaik.style.color = 'white'
+divisi.appendChild(tombolNaik)
+
+tombolNaik.onclick = function(){
+  angka++
+  if(angka === 1){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-S8HTBQqmfcs%2FXN0ACIRD9PI%2FAAAAAAAAAlo%2FFLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw%2Fs1600%2Ff_logo_RGB-Blue_1024.png&f=1&nofb=1&ipt=e10f40cc2c622f2922096defefed8a82b8831a692d040f830711a6469deb4aa9&ipo=images'
+  } else if(angka === 2){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.JtmXSh_uyZBaTg1eXd-NtgHaHa%26pid%3DApi&f=1&ipt=d584034ef42e320a3e263cb7450f0657ff2be6402e7320755a132fa3df3db11a&ipo=images'
+  } else if(angka === 3){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.IMt2d1p04pNAyBdnlHC7-gHaHa%26pid%3DApi&f=1&ipt=c730693b75bcf83ebb76465ff5b2bd721777329038920b8bd5709c38c43fd66c&ipo=images'
+  } else if(angka === 4){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.w_zDkEJ9aLiWR-g0rff8hwHaHa%26pid%3DApi&f=1&ipt=75d65cf122503b69cea4946661a0708aa667466a3c7a7c93b338a89bb16fd1b7&ipo=images'
+  } else if(angka === 5){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.H836RvDYYgQZcZn0TC8qBAHaHa%26pid%3DApi&f=1&ipt=c95aedcf75b0eb29c531166d452aa8f969977680fcb0d2c1c40809cf77ce41d7&ipo=images'
+  } else{
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.AIqkBUv22YkLhZ5vBIyhQwHaHa%26pid%3DApi&f=1&ipt=384f5d825937ebd4609726b5d98811d0f7232cc4807d8f3bc167d94d7025ee91&ipo=images'
+  }
+  return teks.innerHTML = `Peringkat: ${angka}`
+}
+
+const tombolTurun = document.createElement('button')
+tombolTurun.innerHTML = 'Turun'
+tombolTurun.style.backgroundColor = 'red'
+tombolTurun.style.color = 'white'
+divisi.appendChild(tombolTurun)
+
+tombolTurun.onclick = function(){
+  angka--
+  if(angka === 1){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-S8HTBQqmfcs%2FXN0ACIRD9PI%2FAAAAAAAAAlo%2FFLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw%2Fs1600%2Ff_logo_RGB-Blue_1024.png&f=1&nofb=1&ipt=e10f40cc2c622f2922096defefed8a82b8831a692d040f830711a6469deb4aa9&ipo=images'
+  } else if(angka === 2){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.JtmXSh_uyZBaTg1eXd-NtgHaHa%26pid%3DApi&f=1&ipt=d584034ef42e320a3e263cb7450f0657ff2be6402e7320755a132fa3df3db11a&ipo=images'
+  } else if(angka === 3){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.IMt2d1p04pNAyBdnlHC7-gHaHa%26pid%3DApi&f=1&ipt=c730693b75bcf83ebb76465ff5b2bd721777329038920b8bd5709c38c43fd66c&ipo=images'
+  } else if(angka === 4){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.w_zDkEJ9aLiWR-g0rff8hwHaHa%26pid%3DApi&f=1&ipt=75d65cf122503b69cea4946661a0708aa667466a3c7a7c93b338a89bb16fd1b7&ipo=images'
+  } else if(angka === 5){
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.H836RvDYYgQZcZn0TC8qBAHaHa%26pid%3DApi&f=1&ipt=c95aedcf75b0eb29c531166d452aa8f969977680fcb0d2c1c40809cf77ce41d7&ipo=images'
+  } else{
+    gambar.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.AIqkBUv22YkLhZ5vBIyhQwHaHa%26pid%3DApi&f=1&ipt=384f5d825937ebd4609726b5d98811d0f7232cc4807d8f3bc167d94d7025ee91&ipo=images'
+  }
+  return teks.innerHTML = `Peringkat: ${angka}`
 }
